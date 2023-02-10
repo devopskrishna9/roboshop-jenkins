@@ -7,9 +7,13 @@
     password: "{{jenkins_password}}"
   loop: "{{ folders }}"
 
-- name: Create Pipeline Jobs
+- name: Create Multibranch Pipeline Jobs
   ansible.builtin.include_tasks: mbranch-pipeline.yml
   loop: "{{ ci_pipeline_jobs }}"
+
+- name: Create Single branch Pipeline Jobs
+  ansible.builtin.include_tasks: sbranch-pipeline.yml
+  loop: "{{ sbranch_pipeline_jobs }}"
 
 
 

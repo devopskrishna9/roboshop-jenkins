@@ -1,4 +1,3 @@
-
 ci_pipeline_jobs:
   - {name: "frontend", dir: "CIPipelines"}
   - {name: "cart", dir: "CIPipelines"}
@@ -9,3 +8,8 @@ ci_pipeline_jobs:
 
 folders:
   - CIPipelines
+  - Infra
+
+sbranch_pipeline_jobs:
+  - {name: "roboshop-infra", dir: "Infra"}
+
